@@ -9,7 +9,6 @@ const roles = [
 
 let roleIndex = 0;
 let charIndex = 0;
-let currentText = "";
 let isDeleting = false;
 
 function typeEffect() {
@@ -17,17 +16,19 @@ function typeEffect() {
 
     if (!typingElement) return;
 
+    let currentRole = roles[roleIndex];
+
     if (!isDeleting) {
-        currentText = roles[roleIndex].substring(0, charIndex + 1);
+        typingElement.textContent = currentRole.substring(0, charIndex + 1);
         charIndex++;
 
-        if (charIndex === roles[roleIndex].length) {
+        if (charIndex === currentRole.length) {
             isDeleting = true;
             setTimeout(typeEffect, 1200);
             return;
         }
     } else {
-        currentText = roles[roleIndex].substring(0, charIndex - 1);
+        typingElement.textContent = currentRole.substring(0, charIndex - 1);
         charIndex--;
 
         if (charIndex === 0) {
@@ -36,8 +37,7 @@ function typeEffect() {
         }
     }
 
-    typingElement.textContent = currentText;
-    setTimeout(typeEffect, isDeleting ? 60 : 120);
+    setTimeout(typeEffect, isDeleting ? 60 : 100);
 }
 
-typeEffect();
+document.addEventListener("DOMContentLoaded", typeEffect);
