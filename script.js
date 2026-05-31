@@ -1,4 +1,5 @@
 console.log("Portfolio Loaded Successfully");
+
 const roles = [
     "Software Developer",
     "AI Enthusiast",
