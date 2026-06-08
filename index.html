@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 
 <body>
@@ -69,7 +70,7 @@
 
     <!-- About -->
 
-    <section class="about" id="about">
+    <section class="about" id="about" data-aos="fade-up">
 
         <h2>👩‍💻 About Me</h2>
 
@@ -83,7 +84,7 @@
 
     <!-- Skills -->
 
-    <section class="skills" id="skills">
+    <section class="skills" id="skills" data-aos="zoom-in">
 
         <h2>🛠 Skills</h2>
 
@@ -160,7 +161,7 @@
 
     <!-- Projects -->
 
-    <section class="projects" id="projects">
+    <section class="projects" id="projects" data-aos="fade-right">
 
         <h2>🚀 Projects</h2>
 
@@ -179,8 +180,7 @@
 
     <!-- Achievements -->
 
-    <section class="achievements" id="achievements">
-
+    <section class="achievements" id="achievements" data-aos="fade-left">
         <h2>🏆 Achievements</h2>
 
         <p>✨ Google Cloud Developer Event Winner</p>
@@ -210,7 +210,7 @@
     </section>
     <!-- Contact -->
 
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" data-aos="fade-up">
 
 
 
@@ -222,7 +222,7 @@
 
         <!-- Contact -->
 
-        <section class="contact" id="contact">
+        <section class="contact" id="contact" data-aos="fade-up">
 
             <h2>📞 Contact</h2>
 
@@ -248,7 +248,11 @@
         </footer>
 
 
-        <script src="script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+            AOS.init();
+        </script>
 
 </body>
 
