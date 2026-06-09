@@ -148,6 +148,9 @@ section h2 {
 
     line-height: 1.8;
     transition: 0.3s;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card:hover {
@@ -156,8 +159,14 @@ section h2 {
 
 /* Lists */
 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
 ul li {
     margin-top: 15px;
+    text-align: center;
 }
 
 /* Contact */
@@ -233,4 +242,21 @@ footer {
 #typing::after {
     content: "|";
     animation: blink 0.7s infinite;
+}
+
+.about,
+.skills,
+.projects,
+.achievements,
+.certifications,
+.contact,
+.stats,
+.internship {
+    width: 100%;
+    text-align: center;
+}
+
+.achievements p,
+.certifications p {
+    text-align: center;
 }
